@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proyecto ASR</title>
+<title>Proyecto de hacer manguitos sanos</title>
 </head>
 <body>
-<h1>Ejemplo de Proyecto de ASR con Cloudant ahora con DevOps Simon</h1>
+<h1>Ejemplo de Proyecto de manguitos sanos con welington ahora con toda la bacaneria</h1>
 <hr />
-<p>Opciones de la clase de ASR:</p>
+<p>Opciones de la clase del mango:</p>
 <ul>
 <li><a href="listar">Listar</a></li>
 <li><a href="insertar?palabra=hola">Insertar</a></li>
