@@ -12,14 +12,14 @@ public class Traductor
 	public static String translate(String palabra, String sourceModel, String destModel, boolean conversational)
 	{
 		String model;
-		if(sourceModel.equals("en") || destModel.equals("en"))
+		if(sourceModel.equals("en") || destModel.equals("es"))
 		{
 			model=sourceModel+"-"+destModel;
 			if(conversational) 
 				model+="-conversational";
 		}
 		else
-			return translate(translate(palabra,sourceModel,"en",conversational),"en",destModel,conversational); //translate to english, then to dest
+			return translate(translate(palabra,sourceModel,"en",conversational),"es",destModel,conversational); //translate to english, then to dest
 
 		LanguageTranslator languageTranslator = new LanguageTranslator("2019-04-09");
 		languageTranslator.setUsernameAndPassword("3b660dde-c20d-4726-8a7f-7402cab1314e","IC2_s8UuNWiGjqbVbEx4Gp3hwMBgZ-1rViKTD8nnBX3S");
