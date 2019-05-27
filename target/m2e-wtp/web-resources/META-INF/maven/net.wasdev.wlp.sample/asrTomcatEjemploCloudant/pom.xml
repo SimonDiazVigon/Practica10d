@@ -80,12 +80,12 @@
 		    <version>2.1</version>
 		</dependency>
 	
-<dependency>
-<groupId>com.ibm.watson.developer_cloud</groupId>
-<artifactId>language-translator</artifactId>
-<version>4.2.1</version>
-</dependency>
 	
+	<dependency>
+	  <groupId>com.ibm.watson.developer_cloud</groupId>
+	  <artifactId>java-sdk</artifactId>
+	  <version>6.11.0</version>
+	</dependency>
 	
   </dependencies>
 
