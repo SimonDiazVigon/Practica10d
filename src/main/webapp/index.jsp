@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proyecto de hacer manguitos sanos</title>
+<title>Proyecto de hacer manguitos sanisimos</title>
 </head>
 <body>
 <h1>Ejemplo de Proyecto de manguitos sanos con welington ahora con toda la bacaneria</h1>
