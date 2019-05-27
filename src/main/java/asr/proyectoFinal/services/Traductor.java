@@ -26,8 +26,7 @@ public class Traductor
 
 		languageTranslator.setEndPoint("https://gateway.watsonplatform.net/language-translator/api");
 		
-		TranslateOptions translateOptions = new
-		TranslateOptions.Builder()
+		TranslateOptions translateOptions = new TranslateOptions.Builder()
 		 .addText(palabra)
 		 .modelId(model)
 		 .build();
@@ -43,8 +42,7 @@ public class Traductor
 		JsonArray traducciones = rootObj.getAsJsonArray("translations");
 		String traduccionPrimera = palabra;
 		if(traducciones.size()>0)
-		traduccionPrimera =
-		traducciones.get(0).getAsJsonObject().get("translation").getAsString();
+		traduccionPrimera = traducciones.get(0).getAsJsonObject().get("translation").getAsString();
 		return traduccionPrimera;
 	}
 }
