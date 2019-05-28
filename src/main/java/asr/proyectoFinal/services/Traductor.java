@@ -22,7 +22,7 @@ public class Traductor
 			return translate(translate(palabra,sourceModel,"en",conversational),"en",destModel,conversational); //translate to english, then to dest
 
 		LanguageTranslator languageTranslator = new LanguageTranslator("2019-04-09");
-		languageTranslator.setUsernameAndPassword("22f90372-0c71-403b-9fc9-df11e8317f6f","RJ1ZNDGS7ERkHgbFjm9FaiAMbUGed_jnPy8JroEwbJxx");
+		languageTranslator.setUsernameAndPassword("9517b48-edbb-4d41-a984-9333637a96bc","bdMRqsy1jOFV");
 
 		languageTranslator.setEndPoint("https://gateway.watsonplatform.net/language-translator/api");
 		
