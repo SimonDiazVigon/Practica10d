@@ -22,11 +22,12 @@ public class Traductor
 			return translate(translate(palabra,sourceModel,"en",conversational),"en",destModel,conversational); //translate to english, then to dest
 
 		LanguageTranslator languageTranslator = new LanguageTranslator("2019-04-09");
-		languageTranslator.setUsernameAndPassword("3b660dde-c20d-4726-8a7f-7402cab1314e","IC2_s8UuNWiGjqbVbEx4Gp3hwMBgZ-1rViKTD8nnBX3S");
+		languageTranslator.setUsernameAndPassword("f9517b48-edbb-4d41-a984-9333637a96bb","vdMRqsy1jOFV");
 
 		languageTranslator.setEndPoint("https://gateway.watsonplatform.net/language-translator/api");
 		
-		TranslateOptions translateOptions = new TranslateOptions.Builder()
+		TranslateOptions translateOptions = new
+		TranslateOptions.Builder()
 		 .addText(palabra)
 		 .modelId(model)
 		 .build();
@@ -37,11 +38,13 @@ public class Traductor
 
 		String traduccionJSON = translationResult.toString();
 		JsonParser parser = new JsonParser();
-		JsonObject rootObj = parser.parse(traduccionJSON).getAsJsonObject();
+		JsonObject rootObj =
+		parser.parse(traduccionJSON).getAsJsonObject();
 		JsonArray traducciones = rootObj.getAsJsonArray("translations");
 		String traduccionPrimera = palabra;
 		if(traducciones.size()>0)
-		traduccionPrimera = traducciones.get(0).getAsJsonObject().get("translation").getAsString();
+		traduccionPrimera =
+		traducciones.get(0).getAsJsonObject().get("translation").getAsString();
 		return traduccionPrimera;
 	}
 }
