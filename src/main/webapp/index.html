@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Proyecto Final ASR</title>
+	<link rel="stylesheet" href="css/estiloLogin.css" type="text/css"></link>
+</head>
+<body >
+<div id="container">
+	<div id="cabecera">
+		<div id="title">
+			Yo nunca... ASR
+			<br>
+		</div>
+		<div id="nombres">
+			Simón Díaz e Ignacio Sanz
+			<br>
+		</div>
+		<div id="limpiar"></div>
+
+	</div>
+
+	<div id="info">
+		<div id="texto">
+			<div id="Instrucciones">
+				Instrucciones
+				<br>
+			</div>
+			Facil y sencillo: simplemente presiona el botón de abajo y a jugar!
+			<button type="button" id="pedir" class="pedir" onclick="getFrase()">
+				Dame una!
+			</button>
+			<div id="nunca">
+				Yo nunca nunca...
+				<div id="frase">
+					
+				</div>
+			</div>
+			<div id="limpiar"></div>
+		</div>
+
+		<div id="texto">
+			<div id="Instrucciones">
+				Otras opciones...
+				<br>
+			</div>
+			A continuación os presentamos otras opciones
+
+			<div id="opciones">
+				<b>Traducir:</b>
+				<br>
+				Por si hay guiris. Elige idioma y pulsa traducir
+				<form onsubmit="traducir(idioma)">
+					<select name="idioma">
+					  	<option value="english">Inglés</option>
+					  	<option value="german">Alemán</option>
+					  	<option value="french">Francés</option>
+					</select>
+					
+					<br>
+				    <input type="submit" value="Traducir" />
+				</form>
+			</div>
+			<div id="opciones">
+				<b>Añadir frase:</b>
+				<br>
+				Simplemente escribe la frase y pulsa añadir:
+				<form onsubmit="insertar()">
+					<input type="text" name="palabra">
+					<br>
+					<input type="submit" value="Insertar">
+				</form>
+			</div>
+			<div id="limpiar"></div>
+		</div>
+		
+		<div id="limpiar"></div>
+	</div>
+			
+	<div id="limpiar"></div>
+</div>
+<div id="limpiar"></div>
+</body>
+</html>
