@@ -4,15 +4,23 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proyecto ASR new...</title>
+<title>Proyecto ASR</title>
 </head>
 <body>
-<h1>Ejemplo de Proyecto de ASR con Cloudant ahora con DevOps</h1>
+<center>
+<a href="http://odbcodetranslator.apic.eu-gb.mybluemix.net/asrTomcatEjemploCloudant"><img src="head.png" ></a><br>
+<h1>ODB II code translator</h1>
 <hr />
-<p>Opciones sobre la base de datos Cloudant versión 2019:</p>
-<ul>
-<li><a href="listar">Listar</a></li>
-<li><a href="insertar?palabra=hola">Insertar</a></li>
-</ul>
+<p>Opciones</p>
+<a href="listar">Listar favoritos</a><br>
+<br>
+<br>
+<br>
+<form action="mostrar" >
+Nombre <input type="text" name="nombre" value="Pepe"><br><br>
+Animales <input type="text" name="animales" value="Diez vacas y cuatro caballos"><br><br>
+ <input type="submit" value="Submit">
+</form>
+</center>
 </body>
 </html>

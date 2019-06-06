@@ -77,7 +77,6 @@ public class Controller extends HttpServlet {
 					}
 				}
 				break;
-				break;
 		}
 		out.println("</html>");
 	}
