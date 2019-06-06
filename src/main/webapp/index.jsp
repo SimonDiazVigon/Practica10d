@@ -16,11 +16,31 @@
 <br>
 <br>
 <br>
+
 <form action="insertar" >
 Nombre <input type="text" name="nombre" value="Pepe"><br><br>
 Animales <input type="text" name="animales" value="Diez vacas y cuatro caballos"><br><br>
 <input type="submit" value="Submit">
 </form>
+
+<form action="insertar">
+  <ul id="fieldList">
+    <li>
+      <input name="nombre[]" type="text" placeholder="Nombre del ganadero" />
+    </li>
+    <li>
+      <input name="vacas[]" type="text" placeholder="Numero de vacas" />
+    </li>
+    <li>
+      <input name="caballos[]" type="text" placeholder="Numero de caballos">
+    </li>
+  </ul>
+  <br>
+  <input type="submit">
+</form>
+
+
+
 </center>
 </body>
 </html>

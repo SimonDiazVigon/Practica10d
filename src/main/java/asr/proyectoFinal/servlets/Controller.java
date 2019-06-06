@@ -48,9 +48,13 @@ public class Controller extends HttpServlet {
 			case "/insertar":
 				Palabra palabra1 = new Palabra();
 				Palabra palabra2 = new Palabra();
-				String nombre = request.getParameter("nombre");
-				String animales = request.getParameter("animales");
+				Palabra palabra3 = new Palabra();
 
+				String nombre = request.getParameter("nombre");
+				String vacas = request.getParameter("vacas");
+				String caballos = request.getParameter("caballos");
+
+				
 				if(nombre==null)
 				{
 					out.println("usage: /insertar?nombre=nombre");
@@ -71,9 +75,11 @@ public class Controller extends HttpServlet {
 						try {
 						palabra1.setName(nombre);
 						store.persist(palabra1);
-						palabra2.setName(animales);
+						palabra2.setName(vacas);
 						store.persist(palabra2);
-					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">Mostrar ganaderos</a> <br> ");		
+						palabra3.setName(caballos);
+						store.persist(palabra3);
+					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">Mostrar ganaderos</a> <br> ");
 						} catch (Exception e) {
 							out.println("Error en el codigo de fallo "+e.toString());
 						}
