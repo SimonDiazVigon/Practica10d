@@ -4,19 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proyecto ASR</title>
+<title>ASEMGA</title>
 </head>
 <body>
 <center>
-<a href="http://odbcodetranslator.apic.eu-gb.mybluemix.net/asrTomcatEjemploCloudant"><img src="head.png" ></a><br>
-<h1>ODB II code translator</h1>
+<a href="https://asrtomcatejemplocloudantsimon.eu-gb.mybluemix.net/asrTomcatEjemploCloudant"><img src="asemga.png" ></a><br>
+<h1>Base de datos de ganaderos en el mercado</h1>
 <hr />
 <p>Opciones</p>
 <a href="listar">Listar favoritos</a><br>
 <br>
 <br>
 <br>
-<form action="mostrar" >
+<form action="insertar" >
 Nombre <input type="text" name="nombre" value="Pepe"><br><br>
 Animales <input type="text" name="animales" value="Diez vacas y cuatro caballos"><br><br>
  <input type="submit" value="Submit">
