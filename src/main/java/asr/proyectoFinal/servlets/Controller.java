@@ -42,7 +42,7 @@ public class Controller extends HttpServlet {
 				if(store.getDB() == null)
 					  out.println("No hay DB");
 				else
-					out.println("Palabras en la BD Cloudant:<br />" + store.getAll());
+					out.println("Ganaderos en la base de datos:<br />" + store.getAll());
 				break;
 				
 			case "/insertar":
@@ -70,7 +70,7 @@ public class Controller extends HttpServlet {
 						try {
 						palabra1.setName(nombre);
 						store.persist(palabra1);
-					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">mostrar favoritos</a> <br> ");		
+					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">Mostrar ganaderos</a> <br> ");		
 						} catch (Exception e) {
 							out.println("Error en el codigo de fallo "+e.toString());
 						}

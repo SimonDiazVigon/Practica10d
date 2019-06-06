@@ -11,15 +11,15 @@
 <a href="https://asrtomcatejemplocloudantsimon.eu-gb.mybluemix.net/asrTomcatEjemploCloudant"><img src="asemga.png" ></a><br>
 <h1>Base de datos de ganaderos en el mercado</h1>
 <hr />
-<p>Opciones</p>
-<a href="listar">Listar favoritos</a><br>
+<p>Introduzca nombre y animales del ganadero</p>
+<a href="listar">Listar ganaderos</a><br>
 <br>
 <br>
 <br>
 <form action="insertar" >
 Nombre <input type="text" name="nombre" value="Pepe"><br><br>
 Animales <input type="text" name="animales" value="Diez vacas y cuatro caballos"><br><br>
- <input type="submit" value="Submit">
+<input type="submit" value="Submit">
 </form>
 </center>
 </body>
