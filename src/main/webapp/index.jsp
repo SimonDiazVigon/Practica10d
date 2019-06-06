@@ -17,12 +17,6 @@
 <br>
 <br>
 
-<form action="insertar" >
-Nombre <input type="text" name="nombre" value="Pepe"><br><br>
-Animales <input type="text" name="animales" value="Diez vacas y cuatro caballos"><br><br>
-<input type="submit" value="Submit">
-</form>
-
 <form action="insertar">
   <ul id="fieldList">
     <li>

@@ -81,6 +81,7 @@ public class Controller extends HttpServlet {
 						store.persist(palabra1);
 						palabra2.setName(vacas);
 						store.persist(palabra2);
+						caballos = Traductor.translate(caballos, "es", "en", false);
 						palabra3.setName(caballos);
 						store.persist(palabra3);
 					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">Mostrar ganaderos</a> <br> ");
