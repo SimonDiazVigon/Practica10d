@@ -20,13 +20,15 @@
 <form action="insertar">
   <ul id="fieldList">
     <li>
-      <input name="nombre[]" type="text" placeholder="Nombre del ganadero" />
+      <input name="nombre" type="text" placeholder="Nombre del ganadero" />
     </li>
+    <br>
     <li>
-      <input name="vacas[]" type="text" placeholder="Numero de vacas" />
+      <input name="vacas" type="text" placeholder="Numero de vacas" />
     </li>
+    <br>
     <li>
-      <input name="caballos[]" type="text" placeholder="Numero de caballos">
+      <input name="caballos" type="text" placeholder="Numero de caballos">
     </li>
   </ul>
   <br>
