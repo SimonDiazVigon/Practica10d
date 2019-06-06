@@ -47,6 +47,7 @@ public class Controller extends HttpServlet {
 				
 			case "/insertar":
 				Palabra palabra1 = new Palabra();
+				Palabra palabra2 = new Palabra();
 				String nombre = request.getParameter("nombre");
 				String animales = request.getParameter("animales");
 
@@ -70,6 +71,8 @@ public class Controller extends HttpServlet {
 						try {
 						palabra1.setName(nombre);
 						store.persist(palabra1);
+						palabra2.setName(animales);
+						store.persist(palabra2);
 					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">Mostrar ganaderos</a> <br> ");		
 						} catch (Exception e) {
 							out.println("Error en el codigo de fallo "+e.toString());
