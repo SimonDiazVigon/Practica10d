@@ -61,9 +61,13 @@ public class Controller extends HttpServlet {
 				}
 				else
 				{
-					if(animales==null)
+					if(vacas==null)
 					{
-						animales="Diez Vacas y Cuatro Caballos";
+						vacas="Cero";
+					}
+					if(caballos==null)
+					{
+						caballos="Cero";
 					}
 					if(store.getDB() == null) 
 					{
