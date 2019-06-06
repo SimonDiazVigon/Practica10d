@@ -25,7 +25,7 @@ import asr.proyectoFinal.services.Traductor;
 /**
  * Servlet implementation class Controller
  */
-@WebServlet(urlPatterns = {"/listar", "/insertar", "/hablar"})
+@WebServlet(urlPatterns = {"/listar", "/insertar"})
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -46,27 +46,37 @@ public class Controller extends HttpServlet {
 				break;
 				
 			case "/insertar":
-				Palabra palabra = new Palabra();
-				String parametro = request.getParameter("palabra");
+				Palabra palabra1 = new Palabra();
+				String nombre = request.getParameter("nombre");
+				String animales = request.getParameter("animales");
 
-				if(parametro==null)
+				if(nombre==null)
 				{
-					out.println("usage: /insertar?palabra=palabra_a_traducir");
+					out.println("usage: /insertar?nombre=nombre");
 				}
 				else
 				{
+					if(animales==null)
+					{
+						animales="Diez Vacas y Cuatro Caballos";
+					}
 					if(store.getDB() == null) 
 					{
-						out.println(String.format("Palabra: %s", palabra));
+						out.println("Error en la base de datos");
 					}
 					else
 					{
-						parametro = Traductor.translate(parametro, "es", "en", false);
-						palabra.setName(parametro);
-						store.persist(palabra);
-					    out.println(String.format("Almacenada la palabra: %s", palabra.getName()));			    	  
+						
+						try {
+						palabra1.setName(nombre);
+						store.persist(palabra1);
+					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">mostrar favoritos</a> <br> ");		
+						} catch (Exception e) {
+							out.println("Error en el codigo de fallo "+e.toString());
+						}
 					}
 				}
+				break;
 				break;
 		}
 		out.println("</html>");
