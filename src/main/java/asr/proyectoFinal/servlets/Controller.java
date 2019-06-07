@@ -57,17 +57,17 @@ public class Controller extends HttpServlet {
 				String vacas = request.getParameter("vacas");
 				String caballos = request.getParameter("caballos");
 				
-				if(nombre==null)
+				if(nombre=="")
 				{
 					out.println("usage: /insertar?nombre=nombre");
 				}
 				else
 				{
-					if(vacas==null)
+					if(vacas=="")
 					{
 						vacas="Cero";
 					}
-					if(caballos==null)
+					if(caballos=="")
 					{
 						caballos="Cero";
 					}
