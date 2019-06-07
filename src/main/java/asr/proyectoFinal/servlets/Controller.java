@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONObject;
+
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
 import asr.proyectoFinal.services.Traductor;
@@ -29,6 +31,7 @@ import asr.proyectoFinal.services.Traductor;
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	@SuppressWarnings("unchecked")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		PrintWriter out = response.getWriter();
@@ -46,14 +49,13 @@ public class Controller extends HttpServlet {
 				break;
 				
 			case "/insertar":
-				Palabra palabra1 = new Palabra();
-				Palabra palabra2 = new Palabra();
-				Palabra palabra3 = new Palabra();
-
+				//Palabra palabra1 = new Palabra();
+				//Palabra palabra2 = new Palabra();
+				//Palabra palabra3 = new Palabra();
+				
 				String nombre = request.getParameter("nombre");
 				String vacas = request.getParameter("vacas");
 				String caballos = request.getParameter("caballos");
-
 				
 				if(nombre==null)
 				{
@@ -77,13 +79,20 @@ public class Controller extends HttpServlet {
 					{
 						
 						try {
-						palabra1.setName(nombre);
-						store.persist(palabra1);
-						palabra2.setName(vacas);
-						store.persist(palabra2);
-						caballos = Traductor.translate(caballos, "es", "en", false);
-						palabra3.setName(caballos);
-						store.persist(palabra3);
+						//palabra1.setName(nombre);
+						//store.persist(palabra1);
+						//palabra2.setName(vacas);
+						//store.persist(palabra2);
+						//palabra3.setName(caballos);
+						//store.persist(palabra3);
+						
+						JSONObject eljson = new JSONObject();
+						eljson.put("NombreG", nombre);
+						eljson.put("Nvacas", vacas);
+						eljson.put("Ncaballos", caballos);
+						
+						store.persist(eljson);
+						
 					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">Mostrar ganaderos</a> <br> ");
 						} catch (Exception e) {
 							out.println("Error en el codigo de fallo "+e.toString());

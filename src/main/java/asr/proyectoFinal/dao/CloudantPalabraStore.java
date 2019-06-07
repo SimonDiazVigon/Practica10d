@@ -20,6 +20,8 @@ import java.net.URL;
 import java.util.Collection;
 import java.util.List;
 
+import org.json.simple.JSONObject;
+
 import com.cloudant.client.api.ClientBuilder;
 import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
@@ -96,6 +98,12 @@ public class CloudantPalabraStore
 		String id = db.save(td).getId();
 		return db.find(Palabra.class, id);
 	}
+	
+	public Palabra persist(JSONObject eljson) {
+		String id = db.save(eljson).getId();
+		return db.find(Palabra.class, id);
+	}
+	
 
 	public Palabra update(String id, Palabra newPalabra) {
 		Palabra visitor = db.find(Palabra.class, id);
