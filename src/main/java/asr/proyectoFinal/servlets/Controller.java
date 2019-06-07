@@ -46,7 +46,7 @@ public class Controller extends HttpServlet {
 					  out.println("No hay DB");
 				else
 					out.println("Ganaderos en la base de datos:<br />" + store.getAll());
-			    	out.println("<br> <a href=\"listar\">Regresar al inicio</a> <br> ");
+			    	out.println("<br> <a href=\"\">Regresar al inicio</a> <br> ");
 
 				break;
 				
@@ -96,6 +96,8 @@ public class Controller extends HttpServlet {
 						store.persist(eljson);
 						
 					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">Mostrar ganaderos</a> <br> ");
+				    	out.println("<br> <a href=\"\">Regresar al inicio</a> <br> ");
+
 						} catch (Exception e) {
 							out.println("Error en el codigo de fallo "+e.toString());
 						}
