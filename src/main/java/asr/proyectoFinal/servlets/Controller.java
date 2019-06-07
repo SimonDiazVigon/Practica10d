@@ -35,7 +35,7 @@ public class Controller extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		PrintWriter out = response.getWriter();
-		out.println("<html><head><meta charset=\"UTF-8\"></head><body>");
+		out.println("<html><head><meta charset=\"UTF-8\"></head><body><center><a href=\"https://asrtomcatejemplocloudantsimon.eu-gb.mybluemix.net/asrTomcatEjemploCloudant\"><img src=\"asemga.png\" ></a><br><br>");
 		
 		CloudantPalabraStore store = new CloudantPalabraStore();
 		System.out.println(request.getServletPath());
@@ -46,8 +46,6 @@ public class Controller extends HttpServlet {
 					  out.println("No hay DB");
 				else
 					out.println("Ganaderos en la base de datos:<br />" + store.getAll());
-			    	out.println("<br> <a href=\"\">Regresar al inicio</a> <br> ");
-
 				break;
 				
 			case "/insertar":
@@ -96,7 +94,6 @@ public class Controller extends HttpServlet {
 						store.persist(eljson);
 						
 					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">Mostrar ganaderos</a> <br> ");
-				    	out.println("<br> <a href=\"\">Regresar al inicio</a> <br> ");
 
 						} catch (Exception e) {
 							out.println("Error en el codigo de fallo "+e.toString());
