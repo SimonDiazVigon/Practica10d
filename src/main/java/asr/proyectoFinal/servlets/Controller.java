@@ -45,7 +45,8 @@ public class Controller extends HttpServlet {
 				if(store.getDB() == null)
 					  out.println("No hay DB");
 				else
-					out.println("Ganaderos en la base de datos:<br />" + store.getAll());
+					out.println("Ganaderos en la base de datos:<br />" + store.getAll() "<br><a href=\>Volver</a> );
+
 				break;
 				
 			case "/insertar":
