@@ -29,7 +29,7 @@ public class Traductor
 		  .build();
 		languageTranslator.setIamCredentials(iamOptions);
 		
-		languageTranslator.setEndPoint("https://gateway.watsonplatform.net/language-translator/api");
+		languageTranslator.setEndPoint("https://gateway-lon.watsonplatform.net/language-translator/api");
 		
 		TranslateOptions translateOptions = new
 		TranslateOptions.Builder()
