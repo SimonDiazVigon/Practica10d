@@ -85,6 +85,9 @@ public class Controller extends HttpServlet {
 						//store.persist(palabra2);
 						//palabra3.setName(caballos);
 						//store.persist(palabra3);
+							
+						vacas = Traductor.translate(vacas, "es", "en", false);
+						caballos = Traductor.translate(caballos, "es", "en", false);
 						
 						JSONObject eljson = new JSONObject();
 						eljson.put("NombreG", nombre);

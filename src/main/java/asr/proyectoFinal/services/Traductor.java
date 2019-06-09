@@ -21,17 +21,9 @@ public class Traductor
 		else
 			return translate(translate(palabra,sourceModel,"en",conversational),"en",destModel,conversational); //translate to english, then to dest
 
-		//LanguageTranslator languageTranslator = new LanguageTranslator("2019-04-09");
-		//languageTranslator.setUsernameAndPassword("201812339@alu.comillas.edu","Zz2TK34rTDHpn3g");
-
-		IamOptions iamOptions = new IamOptions.Builder()
-				  .apiKey("APQKTICy4cltjRLkzZva--oBCw-oL7dC3hj0USzT2jwj")
-				  .build();
-		
-		LanguageTranslator languageTranslator = new LanguageTranslator("2019-04-09", iamOptions);
-		languageTranslator.setIamCredentials(iamOptions);
-		
-		//languageTranslator.setEndPoint("https://gateway-lon.watsonplatform.net/language-translator/api");
+		LanguageTranslator languageTranslator = new LanguageTranslator("2019-04-09");
+		languageTranslator.setUsernameAndPassword("apikey","APQKTICy4cltjRLkzZva--oBCw-oL7dC3hj0USzT2jwj");
+		languageTranslator.setEndPoint("https://gateway-lon.watsonplatform.net/language-translator/api");
 		
 		TranslateOptions translateOptions = new
 		TranslateOptions.Builder()
