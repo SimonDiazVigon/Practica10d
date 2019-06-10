@@ -78,25 +78,25 @@ public class CloudantPalabraStore
 		}
 	}
 	
-//	public Collection<Palabra> getAll(){
-//       List<Palabra> docs;
-//		try {
-//			docs = db.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Palabra.class);
-//		} catch (IOException e) {
-//			return null;
-//		}
-//        return docs;
-//	}
-
-	public Collection<JSONObject> getAll(){
-        List<JSONObject> docs;
+	public Collection<Palabra> getAll(){
+       List<Palabra> docs;
 		try {
-			docs = db.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(JSONObject.class);
+			docs = db.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(Palabra.class);
 		} catch (IOException e) {
 			return null;
 		}
         return docs;
 	}
+
+//	public Collection<JSONObject> getAll(){
+//        List<JSONObject> docs;
+//		try {
+//			docs = db.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(JSONObject.class);
+//		} catch (IOException e) {
+//			return null;
+//		}
+//        return docs;
+//	}
 	
 	
 	
@@ -119,7 +119,7 @@ public class CloudantPalabraStore
 
 	public Palabra update(String id, Palabra newPalabra) {
 		Palabra visitor = db.find(Palabra.class, id);
-		visitor.setName(newPalabra.getName());
+		visitor.setName(newPalabra.getName(),newPalabra.getName(),newPalabra.getName());
 		db.update(visitor);
 		return db.find(Palabra.class, id);
 		

@@ -23,9 +23,15 @@ public class Palabra {
 	private String _id;
 	private String _rev;
 	private String name = null;
-
+	private String vacas = null;
+	private String caballos= null;
+	
+	
+	
 	public Palabra() {
 		this.name = "";
+		this.vacas = "";
+		this.caballos = "";
 	}
 
 	/**
@@ -81,8 +87,10 @@ public class Palabra {
 	 * @param name
 	 *            The visitorName to set.
 	 */
-	public void setName(String visitorName) {
-		this.name = visitorName;
+	public void setName(String uno, String dos, String tres) {
+		this.name = uno;
+		this.vacas = dos;
+		this.caballos = tres;
 	}
 	
 	@Override

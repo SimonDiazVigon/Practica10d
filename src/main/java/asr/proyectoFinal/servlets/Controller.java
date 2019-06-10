@@ -49,9 +49,7 @@ public class Controller extends HttpServlet {
 				break;
 				
 			case "/insertar":
-				//Palabra palabra1 = new Palabra();
-				//Palabra palabra2 = new Palabra();
-				//Palabra palabra3 = new Palabra();
+				Palabra palabra = new Palabra();
 				
 				String nombre = request.getParameter("nombre");
 				String vacas = request.getParameter("vacas");
@@ -85,16 +83,20 @@ public class Controller extends HttpServlet {
 						//store.persist(palabra2);
 						//palabra3.setName(caballos);
 						//store.persist(palabra3);
+						//vacas = Traductor.translate(vacas, "es", "en", false);
+						//caballos = Traductor.translate(caballos, "es", "en", false);
+						//JSONObject eljson = new JSONObject();
+						//eljson.put("NombreG", nombre);
+						//eljson.put("Nvacas", vacas);
+						//eljson.put("Ncaballos", caballos);
+						//store.persist(eljson);
 							
+
 						vacas = Traductor.translate(vacas, "es", "en", false);
 						caballos = Traductor.translate(caballos, "es", "en", false);
-						
-						JSONObject eljson = new JSONObject();
-						eljson.put("NombreG", nombre);
-						eljson.put("Nvacas", vacas);
-						eljson.put("Ncaballos", caballos);
-						
-						store.persist(eljson);
+						palabra.setName(nombre,vacas,caballos);
+						store.persist(palabra);
+						out.println(String.format("Almacenado el ganadero: %s", palabra.getName()));	
 						
 					    out.println("Informaci&oacute;n guardada correctamente, <br><a href=\"listar\">Mostrar ganaderos</a> <br> ");
 
