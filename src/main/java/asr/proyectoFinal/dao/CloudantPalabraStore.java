@@ -98,9 +98,7 @@ public class CloudantPalabraStore
 //        return docs;
 //	}
 	
-	
-	
-	
+		
 	public Palabra get(String id) {
 		return db.find(Palabra.class, id);
 	}
@@ -111,15 +109,15 @@ public class CloudantPalabraStore
 		return db.find(Palabra.class, id);
 	}
 	
-	public Palabra persist(JSONObject eljson) {
-		String id = db.save(eljson).getId();
-		return db.find(Palabra.class, id);
-	}
+//	public Palabra persist(JSONObject eljson) {
+//		String id = db.save(eljson).getId();
+//		return db.find(Palabra.class, id);
+//	}
 	
 
 	public Palabra update(String id, Palabra newPalabra) {
 		Palabra visitor = db.find(Palabra.class, id);
-		visitor.setName(newPalabra.getName(),newPalabra.getName(),newPalabra.getName());
+		visitor.setName(newPalabra.getName());
 		db.update(visitor);
 		return db.find(Palabra.class, id);
 		

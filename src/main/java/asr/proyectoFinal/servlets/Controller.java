@@ -83,18 +83,14 @@ public class Controller extends HttpServlet {
 						//store.persist(palabra2);
 						//palabra3.setName(caballos);
 						//store.persist(palabra3);
-						//vacas = Traductor.translate(vacas, "es", "en", false);
-						//caballos = Traductor.translate(caballos, "es", "en", false);
-						//JSONObject eljson = new JSONObject();
-						//eljson.put("NombreG", nombre);
-						//eljson.put("Nvacas", vacas);
-						//eljson.put("Ncaballos", caballos);
-						//store.persist(eljson);
-							
-
 						vacas = Traductor.translate(vacas, "es", "en", false);
 						caballos = Traductor.translate(caballos, "es", "en", false);
-						palabra.setName(nombre,vacas,caballos);
+						JSONObject eljson = new JSONObject();
+						eljson.put("NombreG", nombre);
+						eljson.put("Nvacas", vacas);
+						eljson.put("Ncaballos", caballos);	
+
+						palabra.setName(eljson);
 						store.persist(palabra);
 						out.println(String.format("Almacenado el ganadero: %s", palabra.getName()));	
 						

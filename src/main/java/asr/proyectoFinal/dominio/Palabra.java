@@ -15,6 +15,8 @@
  */
 package asr.proyectoFinal.dominio;
 
+import org.json.simple.JSONObject;
+
 /**
  * Represents a Visitor document stored in Cloudant.
  */
@@ -22,16 +24,16 @@ package asr.proyectoFinal.dominio;
 public class Palabra {
 	private String _id;
 	private String _rev;
-	private String name = null;
-	private String vacas = null;
-	private String caballos= null;
+	private JSONObject name = null;
+//	private String vacas = null;
+//	private String caballos= null;
 	
 	
 	
 	public Palabra() {
-		this.name = "";
-		this.vacas = "";
-		this.caballos = "";
+		this.name = null;
+//		this.vacas = "";
+//		this.caballos = "";
 	}
 
 	/**
@@ -77,7 +79,7 @@ public class Palabra {
 	 * 
 	 * @return The name of the document.
 	 */
-	public String getName() {
+	public JSONObject getName() {
 		return name;
 	}
 
@@ -87,16 +89,16 @@ public class Palabra {
 	 * @param name
 	 *            The visitorName to set.
 	 */
-	public void setName(String uno, String dos, String tres) {
+	public void setName(JSONObject uno) {
 		this.name = uno;
-		this.vacas = dos;
-		this.caballos = tres;
+//		this.vacas = dos;
+//		this.caballos = tres;
 	}
 	
-	@Override
-	public String toString()
-	{
-		return name;
-	}
+//	@Override
+//	public String toString()
+//	{
+//		return name;
+//	}
 
 }
