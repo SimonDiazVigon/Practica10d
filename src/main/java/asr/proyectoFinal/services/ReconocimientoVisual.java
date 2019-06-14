@@ -34,7 +34,7 @@ public class ReconocimientoVisual  {
 	public static String reconoce(String url) {
 	
 	IamOptions options = new IamOptions.Builder()
-			  .apiKey("{apikey}")
+			  .apiKey("2NRWwDm1refs6aW6w9b5EBnUTr4eDb7gvNc5OGA-gm23")
 			  .build();
 
 			VisualRecognition visualRecognition = new VisualRecognition("2018-03-19", options);
