@@ -23,6 +23,7 @@ import org.json.simple.JSONObject;
 
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
+import asr.proyectoFinal.services.ReconocimientoVisual;
 import asr.proyectoFinal.services.Traductor;
 
 /**
@@ -115,7 +116,7 @@ public class Controller extends HttpServlet {
 				
 			case "/reconocimiento":
 				
-				
+				out.println(ReconocimientoVisual.reconoce(request.getParameter("URL")));
 				
 				break;
 				
