@@ -36,6 +36,13 @@
 </form>
 
 
+<form action="reconocimiento">
+	<label for="reconocimiento">Identifica el tipo de animal de la foto:</label>
+	<input type="file"
+       id="reconocimiento" name="reconocimiento"
+       accept="image/png, image/jpeg">
+</form>
+
 
 </center>
 </body>

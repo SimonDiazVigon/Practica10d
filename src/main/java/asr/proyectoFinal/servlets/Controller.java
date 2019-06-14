@@ -10,6 +10,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.nio.Buffer;
 import java.nio.file.Files;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -27,7 +28,7 @@ import asr.proyectoFinal.services.Traductor;
 /**
  * Servlet implementation class Controller
  */
-@WebServlet(urlPatterns = {"/listar", "/insertar"})
+@WebServlet(urlPatterns = {"/listar", "/insertar","/reconocimiento"})
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -44,8 +45,17 @@ public class Controller extends HttpServlet {
 			case "/listar":
 				if(store.getDB() == null)
 					  out.println("No hay DB");
-				else
-					out.println("Ganaderos en la base de datos:<br />" + store.getAll());
+				else {
+
+					out.println("Ganaderos en la base de datos:<br />");
+					Iterator<Palabra> iterator = store.getAll().iterator();
+					Palabra s;
+					while (iterator.hasNext()) {
+						s=iterator.next();
+						JSONObject name=s.getName();
+						out.println("<br />" + name.toString());
+						}
+				}
 				break;
 				
 			case "/insertar":
@@ -102,6 +112,13 @@ public class Controller extends HttpServlet {
 					}
 				}
 				break;
+				
+			case "/reconocimiento":
+				
+				
+				
+				break;
+				
 		}
 		out.println("</html>");
 	}
